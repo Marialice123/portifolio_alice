@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Desenvolvedora Front-end</title>
+    <link rel="stylesheet" href="atividade.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home" class="nav-link active" onclick="mostrarSecao('home')">Home</a></li>
+                <li><a href="#sobre" class="nav-link" onclick="mostrarSecao('sobre')">Sobre mim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section active-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Construindo meu futuro na tecnologia com <br> <span>Desenvolvimento de Sistemas!</span></h1>
+                    <p>Olá! Sou Maria Alice, estudante do curso Técnico em Desenvolvimento de Sistemas, atualmente no 2o módulo.
+Estou desenvolvendo meus conhecimentos em programação, desenvolvimento de web e tecnologia, buscando transformar ideias em soluções 
+criativas e funcionais. Vamos conversar?</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="https://instagram.com" target="_blank" class="btn btn-primary">Instagram</a>
+                        <a href="https://github.com" target="_blank" class="btn btn-secondary">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="attv.jpeg" alt="Foto de perfil">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="sobre" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>Sobre mim</h2>
+                    <p>Sou estudante de Técnico em Desenvolvimento de Sistemas, atualmente no 2o módulo, e tenho interesse em 
+tecnologia e desenvolvimento de soluções digitais.</p>
+                    <p>Durante minha formação, venho aprimorando meus conhecimentoss em programação, desenvolvimentp web e lógica,
+buscando evoluir constantemente e colocar em prática o que aprendo.</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="https://instagram.com" target="_blank" class="btn btn-primary">Instagram</a>
+                        <a href="https://github.com" target="_blank" class="btn btn-secondary">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="attv.jpeg" alt="Foto de perfil">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Maria Alice | Estudante de Desenvolvimento de Sistemas</p>
+    </footer>
+
+    <script>
+        function mostrarSecao(secaoId) {
+            // Esconde todas as seções
+            document.querySelectorAll('.hero-section').forEach(sec => {
+                sec.classList.remove('active-section');
+            });
+            // Mostra a seção selecionada
+            document.getElementById(secaoId).classList.add('active-section');
+
+            // Atualiza a classe active do menu
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
